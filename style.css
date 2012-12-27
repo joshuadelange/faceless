@@ -4,3 +4,35 @@
 	margin: 0px;
 	padding: 0px;
 }
+
+h1 {
+	font-family: 'Norican', cursive; /*Woot woot, fancy!*/
+	font-size: 67px;
+	
+	color: #6b6a6a;
+
+	text-shadow: -1px -1px -1px #464646;
+}
+
+body {
+	/*Let there be noise!*/
+	background-image: url('img/bg.jpg') ;
+}
+
+#side,
+#main {
+	float: left;
+}
+
+#side {
+	width: 20%;
+
+	margin-left: 10%;
+
+	padding-top: 5%;
+}
+
+#main {
+	width: 30%;
+	margin-left: 5%;
+}
