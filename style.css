@@ -32,6 +32,15 @@ body {
 	padding-top: 5%;
 }
 
+#side #profile {
+	margin-top: 40px;
+}
+
+#side #profile p {
+	margin-left: 15px;
+	margin-bottom: 0px;
+}
+
 #main {
 	width: 30%;
 	margin-left: 5%;
