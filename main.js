@@ -2,23 +2,11 @@
 $(document).ready(function(){
 
 	function startThaAppNaow(){
-		console.log('startin…') ;
 
-		console.log('Welcome!  Fetching your information.... ');
-
-		FB.api('/me', function(response) {
-			console.log('Good to see you, ' + response.name + '.');
-			console.log(response) ;
-	
-			var profilePicture = $('<img>') ;
-			profilePicture.attr('src', 'http://graph.facebook.com/' +response.username+ '/picture')
-	
-			$('#side').append(profilePicture) ;
-
-			//Gets friend's status
-			//me/friends?fields=statuses.limit(1).offset(10).fields(message),name&limit=1&offset=396
-
-		});
+		new Profile('#profile') ;
+		
+		//Gets friend's status
+		//me/friends?fields=statuses.limit(1).offset(10).fields(message),name&limit=1&offset=396
 
 
 	}
