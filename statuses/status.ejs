@@ -1,4 +1,17 @@
 <div class="status">
-	<p><%=status.message%></p>
-	<p><%=status.updated_time%></p>
+	<p class="message"><%=status.message%></p>
+	<p class="date muted" title="<%=status.updated_time%>"><%=new Date(status.updated_time).toRelativeTime()%></p>
+
+	<div class="friends">
+
+		<%
+		friends.data.push(status.friend) ;
+
+		$.each(shuffleArray(friends.data), function(i, friend){ %>
+			<div class="friend">
+				<img src="http://graph.facebook.com/<%=this.username%>/picture?width=90&height=90" alt="<%=friend.name%>">
+			</div>
+		<% }); %>
+
+	</div>
 </div>

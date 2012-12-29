@@ -12,16 +12,15 @@ var Status = can.Model({
 
 			var friend = response.data[0];
 			
-			console.log(friend) ;
-
 			if(!friend.statuses) {
 				//No status ):
 				this.findRandom(params, cb) ; //Just find another one.
 			}
 			else{
 
-				var status = friend.statuses.data[0] ;
-				status.friend_id = friend.id ;
+				var status = friend.statuses.data[0] ; //Get the status from the friend object
+				delete friend.statuses ; //Remove the status from the friend obj
+				status.friend = friend ; //Add the friend obj to the status
 
 				var deff = $.Deferred() ;
 				deff.then(cb) ;
