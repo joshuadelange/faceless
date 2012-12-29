@@ -19,29 +19,16 @@ body {
 	background-image: url('img/bg.jpg') ;
 }
 
-#side,
-#main {
-	float: left;
-}
-
 #side {
-	width: 20%;
-
-	margin-left: 10%;
-
-	padding-top: 5%;
+	padding-top: 50px;
 }
 
 #side #profile {
 	margin-top: 40px;
+	min-height: 50px;
 }
 
 #side #profile p {
 	margin-left: 15px;
 	margin-bottom: 0px;
-}
-
-#main {
-	width: 30%;
-	margin-left: 5%;
 }

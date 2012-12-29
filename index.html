@@ -11,24 +11,31 @@
 	<body>
 		<div id="fb-root"></div>
 
-		<section id="side">
-			<h1>Faceless!</h1>
+		<div id="wrapper" class="row-fluid">
 
-			<div id="profile"></div>
-		</section>
+			<section id="side" class="span3 offset1">
+				<h1>Faceless!</h1>
 
-		<section id="main">
-			<p>This is where all the good stuff will come. Believe me. Soon.</p>
-		</section>
+				<div id="profile"></div>
+			</section>
+
+			<section id="statuses" class="span7">
+				<p>This is where all the good stuff will come. Believe me. Soon.</p>
+			</section>
+
+		</div>
 
 		<script src="libs/jquery.js"></script>
 		<script src="libs/can.js"></script>
 		<script src="libs/bootstrap.min.js"></script>
 
-		<script src="profile/profile.js"></script>
-
 		<script src="models/user.js"></script>
-		
+		<script src="models/friend.js"></script>
+		<script src="models/status.js"></script>
+
+		<script src="profile/profile.js"></script>
+		<script src="statuses/statuses.js"></script>
+
 		<script src="main.js"></script>
 	</body>
 </html>

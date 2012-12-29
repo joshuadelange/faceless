@@ -5,6 +5,8 @@ $(document).ready(function(){
 
 		new Profile('#profile') ;
 		
+		new Statuses('#statuses') ;
+
 		//Gets friend's status
 		//me/friends?fields=statuses.limit(1).offset(10).fields(message),name&limit=1&offset=396
 
