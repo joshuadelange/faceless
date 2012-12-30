@@ -36,10 +36,6 @@ var Statuses = can.Control({
 
 	},
 
-	'.loadStatus click': function(){
-		this.addStatus();
-	},
-
 	'.friend click': function(el, ev) {
 
 		var $guessedFriend = $(el),
