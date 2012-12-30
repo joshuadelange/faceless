@@ -7,10 +7,6 @@ $(document).ready(function(){
 		
 		new Statuses('#statuses') ;
 
-		//Gets friend's status
-		//me/friends?fields=statuses.limit(1).offset(10).fields(message),name&limit=1&offset=396
-
-
 	}
 
 	window.fbAsyncInit = function() {

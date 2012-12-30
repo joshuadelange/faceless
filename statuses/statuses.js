@@ -1,18 +1,70 @@
-Statuses = can.Control({}, {
+var Statuses = can.Control({
+	//Static
+}, {
+	//Prototype
 
 	init: function(el, options){
-		
-		el = this.element ;
+
+		//Start off with adding a status
+		this.addStatus() ;
+
+	},
+
+	addStatus: function(){
+
+		var el = this.element,
+			self = this ;
 
 		Friend.findRandom({limit:3}, function(friends){
 			Status.findRandom({}, function(status){
-				el.html(can.view('statuses/status.ejs', {
+				el.find('#status-list').append(can.view('statuses/status.ejs', {
 					status: status,
 					friends: friends
 				})) ;
+				$('[rel="tooltip"]').tooltip();
+
+				var newStatus = el.find('.status').last() ;
+				el.css('height', el.height() + newStatus.outerHeight(true)) ;
+
+				$('html, body').animate({
+					scrollTop: newStatus.offset().top
+				},'slow');
+
 			}) ;
+		}) ;
+
+
+	},
+
+	'.loadStatus click': function(){
+		console.log('add status plz') ;
+		this.addStatus();
+	},
+
+	'.status mouseover': function(){
+		console.log('sup')
+	},
+
+	'.friend click': function(el, ev) {
+
+		console.log('mouse enter') ;
+
+		$friend = $(el) ;
+
+		$friend.animate({
+			boxShadowBlur: '0px'
 		})
 
 	},
+
+	'.friend mouseleave': function(el, ev) {
+
+		$friend = $(el) ;
+
+		$friend.animate({
+			boxShadowBlur: ''
+		})
+
+	}
 
 })
