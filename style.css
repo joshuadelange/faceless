@@ -72,6 +72,7 @@ a.credits {
 
 #loader {
 	margin: 45px 185px;
+	display: none;
 }
 
 #status-list {

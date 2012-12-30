@@ -3,6 +3,8 @@ $(document).ready(function(){
 
 	function startThaAppNaow(){
 
+		$('#loader').fadeIn();
+
 		new Scores('#score') ;
 
 		new Profile('#profile') ;
@@ -19,6 +21,10 @@ $(document).ready(function(){
 			cookie     : true, // enable cookies to allow the server to access the session
 			xfbml      : true  // parse XFBML
 		});
+	}
+
+
+	$('#login').click(function(){
 
 		FB.getLoginStatus(function(response) {
 
@@ -35,12 +41,14 @@ $(document).ready(function(){
 
 			}
 			else{
+				$(this).fadeOut();
+
 				startThaAppNaow();
 			}
 
 		});
 
-	};
+	}) ;
 
 	(function(d){
 		var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
