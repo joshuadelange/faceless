@@ -26,7 +26,7 @@ var Statuses = can.Control({
 				$('[rel="tooltip"]').tooltip();
 
 				$('#loader').fadeOut();
-				
+
 				var newStatus = el.find('.status').last() ;
 				el.css('height', el.height() + (newStatus.outerHeight(true) + 60)) ;
 
@@ -74,9 +74,6 @@ var Statuses = can.Control({
 			this.addStatus() ;
 
 		}
-
-
-
 
 	},
 
