@@ -4,6 +4,7 @@ $(document).ready(function(){
 	function startThaAppNaow(){
 
 		$('#loader').fadeIn();
+		$('#login').fadeOut();
 
 		new Scores('#score') ;
 
@@ -15,38 +16,40 @@ $(document).ready(function(){
 
 	window.fbAsyncInit = function() {
 		FB.init({
-			appId      : '393049337449640', // App ID
+			appId      : '393049337449640', // PROD
+			// appId      : '486875798018589', // DEV for localhost/Faceless/
 			channelUrl : '//joshuadelange.github.com/faceless/channel.html', // Channel File
 			status     : true, // check login status
 			cookie     : true, // enable cookies to allow the server to access the session
 			xfbml      : true  // parse XFBML
 		});
-	}
-
-
-	$('#login').click(function(){
-
+	
 		FB.getLoginStatus(function(response) {
 
 			if(response.status !== 'connected') {
 
-				FB.login(function(response) {
-					if (response.authResponse) {
-						startThaAppNaow() ;
-					} else {
-						alert('Really? Just login and authorize us already so we can have some fun.') ;
-						window.fbAsyncInit();
-					}
-				},{scope:'friends_status'});
+				$('#login').fadeIn();
 
 			}
 			else{
-				$(this).fadeOut();
 
 				startThaAppNaow();
 			}
 
 		});
+
+	}
+
+	$('#login').click(function(){
+
+		FB.login(function(response) {
+			if (response.authResponse) {
+				startThaAppNaow() ;
+			} else {
+				alert('Really? Just login and authorize us already so we can have some fun.') ;
+				window.fbAsyncInit();
+			}
+		},{scope:'friends_status'});
 
 	}) ;
 
