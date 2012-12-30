@@ -24,7 +24,7 @@ var Statuses = can.Control({
 				$('[rel="tooltip"]').tooltip();
 
 				var newStatus = el.find('.status').last() ;
-				el.css('height', el.height() + newStatus.outerHeight(true)) ;
+				el.css('height', el.height() + (newStatus.outerHeight(true) + 60)) ;
 
 				$('html, body').animate({
 					scrollTop: newStatus.offset().top
@@ -41,6 +41,38 @@ var Statuses = can.Control({
 	},
 
 	'.friend click': function(el, ev) {
+
+		var $guessedFriend = $(el),
+			guessedFriend = $guessedFriend.data('friend'),
+			$status = $guessedFriend.closest('.status'),
+			status = $status.data('status') ;
+
+		if(!$status.hasClass('guessed')) {
+
+			$status.addClass('guessed') ;
+
+			//Keep the selected friend, you know, selected
+			$guessedFriend.addClass('selected') ;
+
+			if(guessedFriend.id == status.friend.id) {
+				//Guessed right!
+				$status.find('.guessedCorrect').show() ;
+			}
+			else{
+				$guessedWrong = $status.find('.guessedWrong') ;
+				$guessedWrong.find('.correctFriend').html(status.friend.name) ;
+				$guessedWrong.show();
+			}
+
+			$status.find('.result').slideDown('fast') ;
+
+			//Lets play again.
+			this.addStatus() ;
+
+		}
+
+
+
 
 	},
 

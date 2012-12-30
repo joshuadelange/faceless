@@ -1,4 +1,4 @@
-<div class="status">
+<div class="status" <%= (el) -> el.data('status',status) %>>
 	
 	<div class="text">
 		<p class="message"><%=status.message%></p>
@@ -12,6 +12,7 @@
 
 		$.each(shuffleArray(friends.data), function(i, friend){ %>
 			<a 
+				<%= (el) -> el.data('friend',friend) %>
 				class="friend" 
 				title="<%=this.name%>" 
 				rel="tooltip" 
@@ -23,5 +24,10 @@
 
 		<div class="clearfix"></div>
 
+	</div>
+
+	<div class="result">
+		<h4 class="muted guessedCorrect">Your guess was <span class="text-success">correct!</span></h4>
+		<h4 class="muted guessedWrong"><span class="text-error">Wrong!</span> It was <span class="correctFriend">your mom</span>!</h4>
 	</div>
 </div>

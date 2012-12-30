@@ -99,3 +99,14 @@ body {
 			box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .0);
 
 }
+
+.status .result {
+	padding: 10px;
+	padding-left: 20px;
+	display: none;
+}
+
+.status .result h4 {
+	display: none;
+	font-weight: 100;
+}
