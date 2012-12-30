@@ -1,22 +1,27 @@
 <!doctype html>
 <html>
 	<head>
+
 		<title>Faceless</title>
 
 		<link href='http://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
 		<link href="libs/bootstrap.min.css" rel="stylesheet">
 		<link href="libs/bootstrap-responsive.min.css" rel="stylesheet">
 		<link href="style.css" rel="stylesheet">
+		<link href="statuses/statuses.css" rel="stylesheet">
+
 	</head>
 	<body>
 		<div id="fb-root"></div>
 
 		<div id="wrapper">
 
-			<section id="side">
+			<aside>
 				<h1>Faceless!</h1>
 
 				<div id="score"></div>
+
+				<div id="profile"></div>
 
 				<div id="description">
 					<p class="muted">In this little facebook game you are presented with a number of random Facebook statuses from any friend, from any time. It is your task to guess what friend belongs to what status.</p>
@@ -26,8 +31,7 @@
 					<a href="javascript://" class="btn" id="login">Start</a>
 				</div>
 
-				<div id="profile"></div>
-			</section>
+			</aside>
 
 			<section id="statuses">
 				<div id="status-list"></div>
@@ -36,7 +40,9 @@
 
 		</div>
 
-		<a id="forkmeongithub" target="_blank" href="https://github.com/joshuadelange/Faceless"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+		<a class="credits" href="http://joshuadelange.com" target="_blank">Lovingly created by Joshua de Lange</a>
+
+		<a class="forkmeongithub" target="_blank" href="https://github.com/joshuadelange/Faceless"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
 		<script type="text/javascript">
 
