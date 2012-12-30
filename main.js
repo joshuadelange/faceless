@@ -31,7 +31,7 @@ $(document).ready(function(){
 						alert('Really? Just login and authorize us already so we can have some fun.') ;
 						window.fbAsyncInit();
 					}
-				});
+				},{scope:'friends_status'});
 
 			}
 			else{
