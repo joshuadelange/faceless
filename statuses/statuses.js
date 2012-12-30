@@ -37,34 +37,11 @@ var Statuses = can.Control({
 	},
 
 	'.loadStatus click': function(){
-		console.log('add status plz') ;
 		this.addStatus();
-	},
-
-	'.status mouseover': function(){
-		console.log('sup')
 	},
 
 	'.friend click': function(el, ev) {
 
-		console.log('mouse enter') ;
-
-		$friend = $(el) ;
-
-		$friend.animate({
-			boxShadowBlur: '0px'
-		})
-
 	},
-
-	'.friend mouseleave': function(el, ev) {
-
-		$friend = $(el) ;
-
-		$friend.animate({
-			boxShadowBlur: ''
-		})
-
-	}
 
 })

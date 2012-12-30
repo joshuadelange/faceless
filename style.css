@@ -83,6 +83,19 @@ body {
 
 	float: left;
 
-	-webkit-box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .4);
-			box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .4);
+	-webkit-box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .6);
+			box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .6);
+
+	-webkit-transition: all .4s ease-out;
+	   -moz-transition: all .4s ease-out;
+		-ms-transition: all .4s ease-out;
+		 -o-transition: all .4s ease-out;
+			transition: all .4s ease-out;
+}
+
+.status .friends .friend.selected,
+.status .friends .friend:hover {
+	-webkit-box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .0);
+			box-shadow: inset 0px 0px 50px 0px rgba(1, 1, 1, .0);
+
 }
