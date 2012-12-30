@@ -10,6 +10,6 @@ var Profile = can.Control({
 			el.html(can.view('profile/profile.ejs', me)) ;
 		}) ;
 
-	},
+	}
 
-})
+}) ;

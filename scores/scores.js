@@ -13,6 +13,6 @@ var Scores = can.Control({
 		el.data('score', score) ;
 		el.html(can.view('scores/scores.ejs', score)) ;
 
-	},
+	}
 
-})
+}) ;

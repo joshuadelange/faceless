@@ -16,7 +16,7 @@ function shuffleArray(array) {
 }
 
 /**
- * STOLEN FROM: 
+ * STOLEN FROM:
  * https://github.com/jherdman/javascript-relative-time-helpers
  *
  * Returns a description of this date in relative terms.
@@ -70,18 +70,18 @@ function shuffleArray(array) {
 
 	// special cases controlled by options
 	if (delta <= opts.nowThreshold) {
-	  return future ? 'Right now' : 'Just now';
+		return future ? 'Right now' : 'Just now';
 	}
 	if (opts.smartDays && delta <= 6 * MS_IN_DAY) {
-	  return toSmartDays(this, now);
+		return toSmartDays(this, now);
 	}
 
 	var units = null;
 	for (var key in CONVERSIONS) {
-	  if (delta < CONVERSIONS[key])
+		if (delta < CONVERSIONS[key])
 		break;
-	  units = key; // keeps track of the selected key over the iteration
-	  delta = delta / CONVERSIONS[key];
+		units = key; // keeps track of the selected key over the iteration
+		delta = delta / CONVERSIONS[key];
 	}
 
 	// pluralize a unit when the difference is greater than 1.
@@ -93,11 +93,11 @@ function shuffleArray(array) {
   var processOptions = function(arg) {
 	if (!arg) arg = 0;
 	if (typeof arg === 'string') {
-	  arg = parseInt(arg, 10);
+		arg = parseInt(arg, 10);
 	}
 	if (typeof arg === 'number') {
-	  if (isNaN(arg)) arg = 0;
-	  return {nowThreshold: arg};
+		if (isNaN(arg)) arg = 0;
+		return {nowThreshold: arg};
 	}
 	return arg;
   };
@@ -106,7 +106,7 @@ function shuffleArray(array) {
 	var day;
 	var weekday = date.getDay(),
 		dayDiff = weekday - now.getDay();
-	if (dayDiff == 0)       day = 'Today';
+	if (dayDiff === 0)		day = 'Today';
 	else if (dayDiff == -1) day = 'Yesterday';
 	else if (dayDiff == 1 && date > now)  day = 'Tomorrow';
 	else                    day = WEEKDAYS[weekday];

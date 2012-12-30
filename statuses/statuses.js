@@ -75,6 +75,6 @@ var Statuses = can.Control({
 
 		}
 
-	},
+	}
 
-})
+}) ;

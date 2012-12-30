@@ -7,17 +7,15 @@ $(document).ready(function(){
 		$('#login').fadeOut();
 
 		new Scores('#score') ;
-
 		new Profile('#profile') ;
-		
 		new Statuses('#statuses') ;
 
 	}
 
 	window.fbAsyncInit = function() {
 		FB.init({
-			appId      : '393049337449640', // PROD
-			// appId      : '486875798018589', // DEV for localhost/Faceless/
+			// appId      : '393049337449640', // PROD
+			appId      : '486875798018589', // DEV for localhost/Faceless/
 			channelUrl : '//joshuadelange.github.com/faceless/channel.html', // Channel File
 			status     : true, // check login status
 			cookie     : true, // enable cookies to allow the server to access the session
@@ -38,7 +36,7 @@ $(document).ready(function(){
 
 		});
 
-	}
+	} ;
 
 	$('#login').click(function(){
 
@@ -61,4 +59,4 @@ $(document).ready(function(){
 		ref.parentNode.insertBefore(js, ref);
 	}(document));
 
-})
+}) ;
