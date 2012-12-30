@@ -110,3 +110,13 @@ body {
 	display: none;
 	font-weight: 100;
 }
+
+#score {
+	margin-top: 40px;
+}
+
+#score h4 {
+	font-weight: 100;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}

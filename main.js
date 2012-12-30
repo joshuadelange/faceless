@@ -3,6 +3,8 @@ $(document).ready(function(){
 
 	function startThaAppNaow(){
 
+		new Scores('#score') ;
+
 		new Profile('#profile') ;
 		
 		new Statuses('#statuses') ;

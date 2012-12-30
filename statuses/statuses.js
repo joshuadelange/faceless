@@ -45,7 +45,8 @@ var Statuses = can.Control({
 		var $guessedFriend = $(el),
 			guessedFriend = $guessedFriend.data('friend'),
 			$status = $guessedFriend.closest('.status'),
-			status = $status.data('status') ;
+			status = $status.data('status'),
+			score = $('#score').data('score') ;
 
 		if(!$status.hasClass('guessed')) {
 
@@ -57,11 +58,13 @@ var Statuses = can.Control({
 			if(guessedFriend.id == status.friend.id) {
 				//Guessed right!
 				$status.find('.guessedCorrect').show() ;
+				score.attr('correct', score.attr('correct') + 1) ;
 			}
 			else{
 				$guessedWrong = $status.find('.guessedWrong') ;
 				$guessedWrong.find('.correctFriend').html(status.friend.name) ;
 				$guessedWrong.show();
+				score.attr('wrong', score.attr('wrong') + 1) ;
 			}
 
 			$status.find('.result').slideDown('fast') ;
