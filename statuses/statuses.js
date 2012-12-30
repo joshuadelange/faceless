@@ -12,6 +12,8 @@ var Statuses = can.Control({
 
 	addStatus: function(){
 
+		$('#loader').fadeIn();
+
 		var el = this.element,
 			self = this ;
 
@@ -23,12 +25,15 @@ var Statuses = can.Control({
 				})) ;
 				$('[rel="tooltip"]').tooltip();
 
+				$('#loader').fadeOut();
+				
 				var newStatus = el.find('.status').last() ;
 				el.css('height', el.height() + (newStatus.outerHeight(true) + 60)) ;
 
 				$('html, body').animate({
 					scrollTop: newStatus.offset().top
 				},'slow');
+		
 
 			}) ;
 		}) ;

@@ -29,6 +29,7 @@ $(document).ready(function(){
 						startThaAppNaow() ;
 					} else {
 						alert('Really? Just login and authorize us already so we can have some fun.') ;
+						window.fbAsyncInit();
 					}
 				});
 
@@ -36,7 +37,6 @@ $(document).ready(function(){
 			else{
 				startThaAppNaow();
 			}
-
 
 		});
 

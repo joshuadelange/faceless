@@ -30,11 +30,14 @@ body {
 }
 
 #side #profile {
+	position: absolute;
+	bottom: 80px;
 	margin-top: 40px;
 	min-height: 50px;
 }
 
 #side #profile p {
+	width: 185px;
 	margin-left: 15px;
 	margin-bottom: 0px;
 }
@@ -47,9 +50,8 @@ body {
 
 }
 
-.loadStatus {
-	margin: 45px 110px;
-	width: 150px;
+#loader {
+	margin: 45px 185px;
 }
 
 #status-list {
