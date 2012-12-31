@@ -24,8 +24,8 @@ steal(	'libs/jquery.js')
 
 	window.fbAsyncInit = function() {
 		FB.init({
-			// appId      : '393049337449640', // PROD
-			appId      : '486875798018589', // DEV for localhost/Faceless/
+			appId      : '393049337449640', // PROD
+			// appId      : '486875798018589', // DEV for localhost/Faceless/
 			channelUrl : '//joshuadelange.github.com/faceless/channel.html', // Channel File
 			status     : true, // check login status
 			cookie     : true, // enable cookies to allow the server to access the session
