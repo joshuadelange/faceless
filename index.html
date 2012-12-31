@@ -1,17 +1,10 @@
 <!doctype html>
 <html>
 	<head>
-
 		<title>Faceless</title>
-
-		<link href='http://fonts.googleapis.com/css?family=Norican' rel='stylesheet' type='text/css'>
-		<link href="libs/bootstrap.min.css" rel="stylesheet">
-		<link href="libs/bootstrap-responsive.min.css" rel="stylesheet">
-		<link href="style.css" rel="stylesheet">
-		<link href="statuses/statuses.css" rel="stylesheet">
-
 	</head>
 	<body>
+
 		<div id="fb-root"></div>
 
 		<div id="wrapper">
@@ -35,7 +28,7 @@
 
 			<section id="statuses">
 				<div id="status-list"></div>
-				<img id="loader" src="img/loader.gif" width="25px" alt="Loading...">
+				<img id="loader" src="app/img/loader.gif" width="25px" alt="Loading...">
 			</section>
 
 		</div>
@@ -44,8 +37,7 @@
 
 		<a class="forkmeongithub" target="_blank" href="https://github.com/joshuadelange/Faceless"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
 
-		<script type="text/javascript">
-
+		<script>
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-10451416-3']);
 			_gaq.push(['_trackPageview']);
@@ -55,22 +47,9 @@
 			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-
 		</script>
 
-		<script src="libs/jquery.js"></script>
-		<script src="libs/can.js"></script>
-		<script src="libs/bootstrap.min.js"></script>
-		<script src="libs/utils.js"></script>
+		<script src="steal/steal.production.js?app/production.js"></script>
 
-		<script src="models/user.js"></script>
-		<script src="models/friend.js"></script>
-		<script src="models/status.js"></script>
-
-		<script src="scores/scores.js"></script>
-		<script src="profile/profile.js"></script>
-		<script src="statuses/statuses.js"></script>
-
-		<script src="main.js"></script>
 	</body>
 </html>
